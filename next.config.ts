@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export', // ✅ enables static export
+  images: {
+    unoptimized: true, // ✅ required for GitHub Pages
+  },
+  basePath: '/software-engineer',  // ✅ add the hyphen
+  assetPrefix: '/software-engineer/',
 };
 
 export default nextConfig;

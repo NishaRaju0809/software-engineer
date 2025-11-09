@@ -153,17 +153,6 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    {!!project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 bg-white/90 dark:bg-slate-800/90 rounded-xl hover:bg-white dark:hover:bg-slate-700 transition-colors shadow-lg backdrop-blur-sm"
-                        aria-label="View GitHub repository"
-                      >
-                        <FiGithub className="text-slate-700 dark:text-slate-300 text-xl" />
-                      </a>
-                    )}
 
                     {!!project.demo && (
                       <a
@@ -188,22 +177,6 @@ export default function Projects() {
                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
-
-                   {!!project?.stats &&  <div className="flex flex-wrap gap-4 mb-6">
-                      {Object.entries(project.stats).map(([key, value]) => (
-                        <div
-                          key={key}
-                          className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-700/50 rounded-xl"
-                        >
-                          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-                            {value}
-                          </span>
-                          <span className="text-sm text-slate-600 dark:text-slate-400 capitalize">
-                            {key}
-                          </span>
-                        </div>
-                      ))}
-                    </div>}
                   </div>
 
                   <div className="flex flex-wrap gap-2">
