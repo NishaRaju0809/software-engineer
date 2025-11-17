@@ -144,11 +144,11 @@ export default function Skills() {
               </div>
 
               {/* Skills grid */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skillIndex}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-300 group/skill"
+                    className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-300 group/skill min-w-0"
                     whileHover={{ scale: 1.05, y: -2 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -157,10 +157,10 @@ export default function Skills() {
                       delay: categoryIndex * 0.1 + skillIndex * 0.05,
                     }}
                   >
-                    <div className={`p-2 rounded-lg bg-gradient-to-br ${category.color} text-white shadow-md group-hover/skill:shadow-lg transition-shadow`}>
-                      <skill.icon className="text-lg" />
+                    <div className={`p-1.5 sm:p-2 rounded-lg bg-gradient-to-br ${category.color} text-white shadow-md group-hover/skill:shadow-lg transition-shadow flex-shrink-0`}>
+                      <skill.icon className="text-base sm:text-lg" />
                     </div>
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                    <span className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 truncate">
                       {skill.name}
                     </span>
                   </motion.div>
